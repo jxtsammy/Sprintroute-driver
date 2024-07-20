@@ -6,16 +6,16 @@ import {
   TouchableOpacity,
   StyleSheet
 } from "react-native";
-import { useNavigation } from '@react-navigation/native';
-import SuccessMsg from './Success'
+import { useNavigation } from '@react-navigation/native'
+import SuccessMsg from '../SuccessMsg'
 
-const PhoneVerification = () => {
+const OTP_Verifications = () => {
   const [otp, setOtp] = useState(["", "", "", ""]);
   const [timer, setTimer] = useState(0);
   const [newOtpRequestText, setNewOtpRequestText] = useState("Request new OTP");
   const navigation = useNavigation();
   const handleNextScreen = () => {
-      navigation.navigate(SuccessMsg); 
+    navigation.navigate(SuccessMsg); 
   };
 
   const handleChange = (text, index) => {
@@ -45,7 +45,6 @@ const PhoneVerification = () => {
     setNewOtpRequestText("Requesting..."); // Show loading state
   }
 
-  /**/
 
   return (
     <View style={styles.body}>
@@ -156,4 +155,4 @@ const styles = StyleSheet.create({
   }
 });
 
-export default PhoneVerification;
+export default OTP_Verifications;
