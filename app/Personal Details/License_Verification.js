@@ -12,7 +12,6 @@ const DriverLicenseVerification = () => {
       };
 
   const pickImage = async () => {
-    // No permissions request is necessary for launching the image library
     let result = await ImagePicker.launchImageLibraryAsync({
       mediaTypes: ImagePicker.MediaTypeOptions.Images,
       allowsEditing: true,
@@ -57,7 +56,7 @@ const DriverLicenseVerification = () => {
         <Text style={styles.header}>Verify License</Text>
       </View>
       </SafeAreaView>
-      <Text style={styles.title}>Let's Verify your driver license</Text>
+      <Text style={styles.title}>Lets Verify your driver license</Text>
       <Text style={styles.subtitle}>Upload a legible picture of your driver license to verify it</Text>
       <TouchableOpacity style={styles.imageContainer} onPress={pickImage}>
         {image ? (
