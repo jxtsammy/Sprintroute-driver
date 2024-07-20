@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/89604a2d97.js" crossorigin="anonymous"></script>
+    <title>Phone Verification</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            width: 300px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            height: 80vh;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+        .title {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 40px;
+            margin-top: 80px;
+            text-align: center;
+            line-height: 10px;
+        }
+
+        .input {
+            width: 10%;
+            padding: 10px;
+            border: none;
+            outline: none;
+            border-radius: 4px;
+            margin-bottom: 60px;
+            font-size: 20px;
+            text-align: center;
+            border: 1px solid black;
+            margin-right: 10px;
+            outline: 1px solid black;
+        }
+            
+        i{
+            font-size: 22px;
+            font-weight: 700;
+        }
+
+        .vcode{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .container p{
+            text-align: center;
+        }
+
+        .button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+            color: black;
+            font-weight: 700;
+            font-size: 18px;
+            background-color: #007bff;
+            cursor: pointer;
+            margin-bottom: 10px;
+            border-radius: 30px;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+        .button.verify {
+            background-color: orange;
+            padding: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <i class="fa-solid fa-angle-left"></i>
+        <div class="title">
+            <h2>Phone Verification</h2>
+            <p>Enter your OTP here</p>
+        </div>
+        
+        <div class="vcode">
+            <input class="input" type="text" maxlength="1" required/>
+            <input class="input" type="text" maxlength="1" required />
+            <input class="input" type="text" maxlength="1" required/>
+            <input class="input" type="text" maxlength="1" required/>
+        </div>
+        <button class="button verify">Verify</button>
+        <p>Request another code in 0s time</p>
+    </div>
+</body>
+</html>
