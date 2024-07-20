@@ -1,21 +1,18 @@
 // EditProfileScreen.js
 import React, { useState } from 'react';
-import { View, Text, TextInput, Image, TouchableOpacity, StyleSheet, StatusBar, SafeAreaView } from 'react-native';
+import { View, Text, TextInput, Image, TouchableOpacity, StyleSheet, SafeAreaView } from 'react-native';
 import * as ImagePicker from 'react-native-image-picker';
 import { useNavigation } from '@react-navigation/native'
 
 const EditProfileScreen = () => {
   const navigation = useNavigation();
-  const handleNextScreen = () => {
-    navigation.navigate(EarnMoney); 
-  };
   const [profilePicture, setProfilePicture] = useState(null);
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [phone, setPhone] = useState('');
 
   const selectImage = () => {
-    ImagePicker.launchImageLibrary({}, (response) => {
+    ImagePicker.launchImageLibrary({profilePicture}, (response) => {
       if (response.assets && response.assets.length > 0) {
         setProfilePicture(response.assets[0].uri);
       }
@@ -23,7 +20,7 @@ const EditProfileScreen = () => {
   };
 
   const captureImage = () => {
-    ImagePicker.launchCamera({}, (response) => {
+    ImagePicker.launchCamera({profilePicture}, (response) => {
       if (response.assets && response.assets.length > 0) {
         setProfilePicture(response.assets[0].uri);
       }
