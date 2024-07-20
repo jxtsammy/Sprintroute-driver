@@ -14,10 +14,9 @@ const Success = () => {
       <Text style={styles.title}>Successfully Verified</Text>
       <Text style={styles.subtitle}>
         You have been Verified Successfully, continue to homepage to start using the app
-
       </Text>
-      <TouchableOpacity style={styles.button}>
-        <Text style={styles.buttonText}>Continue</Text>
+      <TouchableOpacity style={styles.button} onPress={handleNextScreen}>
+        <Text style={styles.buttonText}>Continue </Text>
       </TouchableOpacity>
     </View>
   );

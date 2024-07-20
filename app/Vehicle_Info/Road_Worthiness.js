@@ -10,11 +10,11 @@ const DatePicker = () => {
   const [day, setDay] = useState('');
   const navigation = useNavigation();
     const handleNextScreen = () => {
-            navigation.navigate(LicenceVerification); 
+            navigation.navigate(LicenceVerification, { year, month, day }); 
       };
 
-  year = Array.from({ length: 11 }, (_, i) => ({ label: `${2020 + i}`, value: `${2020 + i}` }));
-  month = [
+  const years = Array.from({ length: 11 }, (_, i) => ({ label: `${2020 + i}`, value: `${2020 + i}` }));
+  const months = [
     { label: 'January', value: 'January' },
     { label: 'February', value: 'February' },
     { label: 'March', value: 'March' },
@@ -28,7 +28,7 @@ const DatePicker = () => {
     { label: 'November', value: 'November' },
     { label: 'December', value: 'December' },
   ];
-  day = Array.from({ length: 31 }, (_, i) => ({ label: `${i + 1}`, value: `${i + 1}` }));
+  const days = Array.from({ length: 31 }, (_, i) => ({ label: `${i + 1}`, value: `${i + 1}` }));
 
   return (
     <View style={styles.container}>
@@ -45,7 +45,7 @@ const DatePicker = () => {
         style={styles.image}
       />
       <Text style={styles.subtitle}>
-        Please enter the date expiry date on your vehicle road worthiness sticker
+        Please enter the date expiry date on your vehicles road worthiness sticker
       </Text>
       <View style={styles.inputGroup}>
       <View style={styles.inputDate}>
