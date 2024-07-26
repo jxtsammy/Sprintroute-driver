@@ -31,8 +31,8 @@ const Login = () =>{
           required
         />
       </View>
-      <TouchableOpacity style={[styles.button, styles.continueButton]}>
-        <Text style={styles.buttonText} onPress={handleLogInPess}>Login</Text>
+      <TouchableOpacity style={[styles.button, styles.continueButton]} onPress={handleLogInPess}>
+        <Text style={styles.buttonText} >Login</Text>
       </TouchableOpacity>
       <Text style={styles.alt}>
         Dont have an account? <TouchableOpacity style={styles.alt2} onPress={handleSignUpPress}><Text style={styles.alttext}>Sign Up</Text></TouchableOpacity>

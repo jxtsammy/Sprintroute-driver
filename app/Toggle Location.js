@@ -30,8 +30,8 @@ const EnableLocation = () => {
       <TouchableOpacity style={styles.button} onPress={enableLocation}>
         <Text style={styles.buttonText} onPress={handleNextScreen }>Use current location</Text>
       </TouchableOpacity>
-      <TouchableOpacity style={styles.skipButton}>
-        <Text style={styles.skipButtonText} onPress={handleNextScreen}>Skip for now</Text>
+      <TouchableOpacity style={styles.skipButton} onPress={handleNextScreen}>
+        <Text style={styles.skipButtonText} >Skip for now</Text>
       </TouchableOpacity>
     </View>
   );

@@ -22,7 +22,7 @@ const UploadDocScreen = () => {
         <View style={styles.dot}></View>
       </View>
       <TouchableOpacity style={styles.button} onPress={handleNextScreen}>
-        <Text style={styles.buttonText}>Get Started</Text>
+        <Text style={styles.buttonText}>Next</Text>
       </TouchableOpacity>
     </View>
   );
