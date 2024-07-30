@@ -18,12 +18,74 @@ const Name = () => {
                     </TouchableOpacity>
                         <Text style={styles.header}>Enter Name</Text>
                 </View>
-                    <View style={styles.inputGroup}>
-                        <TextInput  style={styles.fname} placeholder="First Name"  placeholderTextColor="#555555"/>
-                        <TextInput style={styles.lname} placeholder="Last Name" placeholderTextColor="#555555"/>
-                    </View>
-                    <TouchableOpacity style={[styles.button, styles.continue]} onPress={handleAddProfile}>
-                        <Text style={styles.buttonText}>Continue</Text>
+      <View style={styles.UserInfo}>
+        <TouchableOpacity onPress={handleChoosePhoto}>
+        <Image
+          source={
+            profilePic
+              ? { uri: profilePic }
+              : require('../../assets/Placeholder.png') // Provide a placeholder image
+          }
+          style={styles.profilePic}
+        />
+      </TouchableOpacity>
+      <View>
+        <Text style={styles.userName}>Sallo Samuel</Text>
+        <Text style={styles.user}>+233 257256751</Text>
+        <Text style={styles.user}>robertflames001@gmail.com</Text>
+      </View>
+      </View>
+      <Text style={styles.inputId}>User Name:</Text>
+      <TextInput
+        style={styles.input}
+        placeholder="First Name"
+        value={firstName}
+        onChangeText={setFirstName}
+      />
+
+      <Text style={styles.inputId}>Mobile Number:</Text>
+      <TextInput
+        style={styles.input}
+        placeholder="Mobile Number"
+        value={mobileNumber}
+        onChangeText={setMobileNumber}
+        keyboardType="phone-pad"
+      />
+
+      <Text style={styles.inputId}>Email Address:</Text>
+      <TextInput
+        style={styles.input}
+        placeholder="Email Address"
+        value={email}
+        onChangeText={setEmail}
+        keyboardType="email-address"
+      />
+
+      <Text style={styles.inputId}>Password:</Text>
+      <TextInput
+        style={styles.input}
+        placeholder="Old Password"
+        value={oldPassword}
+        onChangeText={setOldPassword}
+        secureTextEntry
+      />
+
+      <TextInput
+        style={styles.input}
+        placeholder="New Password"
+        value={newPassword}
+        onChangeText={setNewPassword}
+        secureTextEntry
+      />
+      <TouchableOpacity style={[styles.button, styles.continue]} onPress={handleSave}>
+                        <Text style={styles.buttonText} onPress={handleNextScreen}>Save</Text>
+
+//                     <View style={styles.inputGroup}>
+//                         <TextInput  style={styles.fname} placeholder="First Name"  placeholderTextColor="#555555"/>
+//                         <TextInput style={styles.lname} placeholder="Last Name" placeholderTextColor="#555555"/>
+//                     </View>
+//                     <TouchableOpacity style={[styles.button, styles.continue]} onPress={handleAddProfile}>
+//                         <Text style={styles.buttonText}>Continue</Text>
                     </TouchableOpacity>
                 </View>
            </SafeAreaView>

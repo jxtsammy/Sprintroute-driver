@@ -4,7 +4,7 @@ import { View, Text, TouchableOpacity, StyleSheet, Image } from 'react-native';
 import * as Location from 'expo-location';
 import Login from './Options/Login'
 
-const EnableLocation = () => {
+const ToggleLocation = () => {
     const navigation = useNavigation();
     const handleNextScreen = () => {
             navigation.navigate(Login); 
@@ -85,4 +85,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default EnableLocation;
+export default ToggleLocation;
