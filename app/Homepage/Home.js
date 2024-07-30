@@ -4,7 +4,6 @@ import { createDrawerNavigator, DrawerItem, DrawerContentScrollView } from '@rea
 import { NavigationContainer} from '@react-navigation/native';
 import Icon from 'react-native-vector-icons/Feather';
 
-import Trip from './TripScreen';
 
 const MainScreen = ({ navigation }) => {
   const [isOnline, setIsOnline] = useState(false);
@@ -12,7 +11,7 @@ const MainScreen = ({ navigation }) => {
   const toggleSwitch = () => setIsOnline(previousState => !previousState);
 
   const handleAcceptButtonPress = () => {
-    navigation.navigate(Trip);
+    navigation.navigate('TripScreen');
   };
 
   return (
