@@ -6,7 +6,7 @@ import { useNavigation } from '@react-navigation/native';
 
 const Stack = createStackNavigator();
 
-const InviteFriendScreen = ({ navigation }) => {
+const InviteFriendScreen = () => {
   const inviteCode = 'Invite COde';
 
   const handleInvite = () => {
@@ -20,14 +20,14 @@ const InviteFriendScreen = ({ navigation }) => {
       <SafeAreaView>
         <View style={styles.nav}>
         <TouchableOpacity onPress={() => navigation.goBack()}>
-        <Text style={styles.navText} >←</Text> 
+        <Text style={styles.navText} >←</Text>
         </TouchableOpacity>
         <Text style={styles.header}>Invite Friends</Text>
       </View>
       </SafeAreaView>
       <View style={styles.inviteContainer}>
         <Image
-          source={require('../../assets/share2.png')} 
+          source={require('../../assets/share2.png')}
           style={styles.inviteImage}
         />
         <Text style={styles.inviteDescription}>
@@ -88,7 +88,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     marginTop: 32,
   },
-  
+
   inviteImage: {
     width: 400,
     height: 400,
