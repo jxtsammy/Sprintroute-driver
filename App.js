@@ -26,7 +26,6 @@ import Vehicle_Info from './app/Vehicle_Info/Vehicle_Info';
 import Vehicle_Image from './app/Vehicle_Info/Vehicle_Image';
 import Road_Worthiness from './app/Vehicle_Info/Road_Worthiness';
 import OTP_Verification from './app/Verification/OTP_Verification';
-import Welcome_Verification from './app/Verification/Verification_Prompt';
 import EarnMoney from './app/Welcome Screens/EarnMoney';
 import RegScreen from './app/Welcome Screens/RegScreen';
 import UploadDocs from './app/Welcome Screens/UploadDocs';
