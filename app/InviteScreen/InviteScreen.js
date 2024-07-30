@@ -6,7 +6,8 @@ import { useNavigation } from '@react-navigation/native';
 
 const Stack = createStackNavigator();
 
-const InviteFriendScreen = () => {
+const InviteFriendScreen = ({ }) => {
+
   const inviteCode = 'Invite COde';
 
   const handleInvite = () => {

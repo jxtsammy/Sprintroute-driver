@@ -26,7 +26,7 @@ const MyAccountPage = () => {
       </SafeAreaView>
       <View style={styles.profileContainer}>
         <Image
-          source={require('./assets/Placeholder.png')}
+          source={require('../../assets/Placeholder.png')}
           style={styles.profileImage}
         />
         <View style={styles.profileDetails}>

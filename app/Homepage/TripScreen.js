@@ -6,7 +6,8 @@ import { useNavigation } from '@react-navigation/native';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import ChatScreen from './ChatScreen';
 
-const Trip = () => {
+const Trip = ({ }) => {
+
   const [buttonText, setButtonText] = useState('Start Pickup');
   const slideAnim = useRef(new Animated.Value(Dimensions.get('window').height)).current; // Start off-screen
 
@@ -48,7 +49,7 @@ const Trip = () => {
       >
         <Marker
           coordinate={{ latitude: 6.6745, longitude: -1.5717 }}
-          image={require('./assets/car.png')}
+          image={require('../../assets/car.png')}
         />
         <Marker
           coordinate={{ latitude: 6.6954, longitude: -1.6162 }}
@@ -67,7 +68,7 @@ const Trip = () => {
         <View style={styles.riderInfo}>
           <Avatar
             rounded
-            source={require('./assets/Placeholder.png')}
+            source={require('../../assets/Placeholder.png')}
             size="medium"
           />
           <View style={styles.riderDetails}>

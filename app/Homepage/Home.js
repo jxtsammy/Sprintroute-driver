@@ -68,7 +68,7 @@ const MainScreen = ({ navigation }) => {
         {/* Repeat this block for each request */}
         <View style={styles.requestCard}>
           <View style={styles.requestHeader}>
-            <Image source={require('./assets/Placeholder.png')} style={styles.requesterImage} />
+            <Image source={require('../../assets/Placeholder.png')} style={styles.requesterImage} />
             <View style={styles.headerInfo}>
               <Text style={styles.requesterName}>Customer Name</Text>
               <View style={styles.requesterInfo}>
@@ -112,7 +112,7 @@ const MainScreen = ({ navigation }) => {
         </View>
         <View style={styles.requestCard}>
           <View style={styles.requestHeader}>
-            <Image source={require('./assets/Placeholder.png')} style={styles.requesterImage} />
+            <Image source={require('../../assets/Placeholder.png')} style={styles.requesterImage} />
             <View style={styles.headerInfo}>
               <Text style={styles.requesterName}>Customer Name</Text>
               <View style={styles.requesterInfo}>
@@ -163,7 +163,7 @@ const DrawerContent = ({ navigation }) => (
   <DrawerContentScrollView>
     <View style={drawerStyles.container}>
       <View style={drawerStyles.profileContainer}>
-        <Image source={require('./assets/Placeholder.png')} style={drawerStyles.profileImage} />
+        <Image source={require('../../assets/Placeholder.png')} style={drawerStyles.profileImage} />
         <Text style={drawerStyles.profileName}>Driver Name </Text>
       </View>
       <View style={drawerStyles.menuItems}>
