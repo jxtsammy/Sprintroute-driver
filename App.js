@@ -1,16 +1,14 @@
 import React from 'react'
 import Demo from './app/AppDemo'
-import Options from './app/Options'
+import Login from './app/Options/Login'
 
 const App = () => {
   return (
     <view>
       <Demo />
-      <Options />
+      <Login />
     </view>
   )
 }
 
 export default App
-
-
