@@ -1,10 +1,7 @@
 import React, { useState } from 'react';
 import { View, Text, TouchableOpacity, Image, StyleSheet, ScrollView } from 'react-native';
-import { NavigationContainer } from '@react-navigation/native';
-import { createStackNavigator } from '@react-navigation/stack';
 import { Ionicons } from '@expo/vector-icons';
-
-const Stack = createStackNavigator();
+import { useNavigation } from '@react-navigation/native';
 
 const languages = [
   { name: 'English', code: 'en', flag: 'https://flagcdn.com/w320/us.png' },
@@ -17,9 +14,9 @@ const languages = [
   { name: 'Dutch', code: 'nl', flag: 'https://flagcdn.com/w320/nl.png' },
 ];
 
-
-const LanguageSelectionScreen = ({ navigation }) => {
+const LanguageSelectionScreen = ({ }) => {
   const [selectedLanguage, setSelectedLanguage] = useState('en');
+  const navigation = useNavigation();
 
   const handleLanguageSelect = (code) => {
     setSelectedLanguage(code);
@@ -63,20 +60,6 @@ const LanguageSelectionScreen = ({ navigation }) => {
         <Text style={styles.saveButtonText}>Save</Text>
       </TouchableOpacity>
     </View>
-  );
-};
-
-const Languages = () => {
-  return (
-    <NavigationContainer>
-      <Stack.Navigator initialRouteName="LanguageSelection">
-        <Stack.Screen
-          name="LanguageSelection"
-          component={LanguageSelectionScreen}
-          options={{ title: 'Change Language' }}
-        />
-      </Stack.Navigator>
-    </NavigationContainer>
   );
 };
 
@@ -138,4 +121,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default Languages;
+export default LanguageSelectionScreen;

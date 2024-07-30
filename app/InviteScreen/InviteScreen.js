@@ -1,30 +1,25 @@
 import React from 'react';
 import { View, Text, TouchableOpacity, Image, StyleSheet, TextInput, SafeAreaView } from 'react-native';
-import { NavigationContainer } from '@react-navigation/native';
-import { createStackNavigator } from '@react-navigation/stack';
 import { useNavigation } from '@react-navigation/native';
 
-const Stack = createStackNavigator();
-
 const InviteFriendScreen = ({ }) => {
-
   const inviteCode = 'Invite COde';
+  const navigation = useNavigation();
 
   const handleInvite = () => {
     // Handle invite action
     console.log('Invite code:', inviteCode);
   };
-  const navigation = useNavigation();
 
   return (
     <View style={styles.container}>
       <SafeAreaView>
         <View style={styles.nav}>
-        <TouchableOpacity onPress={() => navigation.goBack()}>
-        <Text style={styles.navText} >←</Text>
-        </TouchableOpacity>
-        <Text style={styles.header}>Invite Friends</Text>
-      </View>
+          <TouchableOpacity onPress={() => navigation.goBack()}>
+            <Text style={styles.navText}>←</Text>
+          </TouchableOpacity>
+          <Text style={styles.header}>Invite Friends</Text>
+        </View>
       </SafeAreaView>
       <View style={styles.inviteContainer}>
         <Image
@@ -47,34 +42,20 @@ const InviteFriendScreen = ({ }) => {
   );
 };
 
-const App = () => {
-  return (
-    <NavigationContainer>
-      <Stack.Navigator initialRouteName="InviteFriend">
-        <Stack.Screen
-          name="InviteFriend"
-          component={InviteFriendScreen}
-          options={{ title: 'Invite Friend', headerShown: false }}
-        />
-      </Stack.Navigator>
-    </NavigationContainer>
-  );
-};
-
 const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#FFF',
     padding: 16,
   },
-   nav: {
-        flexDirection: 'row',
-        marginBottom: 0,
-        marginRight: 150,
-        display: 'flex',
-        alignItems: 'center',
-    justifyContent: 'center'
-    },
+  nav: {
+    flexDirection: 'row',
+    marginBottom: 0,
+    marginRight: 150,
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
   header: {
     fontSize: 25,
     fontWeight: '600',
@@ -89,7 +70,6 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     marginTop: 32,
   },
-
   inviteImage: {
     width: 400,
     height: 400,
@@ -125,4 +105,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default App;
+export default InviteFriendScreen;
