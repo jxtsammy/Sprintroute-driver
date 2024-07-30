@@ -16,7 +16,7 @@ const Login = () => {
 
   return (
     <View style={styles.container}>
-      <SafeAreaView>
+      <SafeAreaView style={styles.safeArea}>
         <Text style={styles.header}>Login your account</Text>
         <View style={styles.inputGroup}>
           <TextInput
@@ -51,6 +51,10 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     backgroundColor: '',
     padding: 20,
+  },
+  safeArea: {
+    width: '100%',
+    alignItems: 'center',
   },
   header: {
     fontSize: 35,
