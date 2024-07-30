@@ -21,7 +21,7 @@ const MainScreen = ({ navigation }) => {
   const toggleSwitch = () => setIsOnline(previousState => !previousState);
 
   const handleAcceptButtonPress = () => {
-    navigation.navigate(Trip); 
+    navigation.navigate(Trip);
   };
 
   return (
@@ -43,7 +43,7 @@ const MainScreen = ({ navigation }) => {
         </View>
       </SafeAreaView>
       <View style={styles.profileContainer}>
-        <Image source={require('./assets/Placeholder.png')} style={styles.profileImage} />
+        <Image source={require('../../assets/Placeholder.png')} style={styles.profileImage} />
         <View>
           <Text style={styles.helloText}>Driver Name</Text>
           <Text style={styles.locationText}>Location</Text>

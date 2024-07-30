@@ -8,10 +8,10 @@ import Profile from '../Personal Details/Name'
 const SignUp = () => {
   const navigation = useNavigation();
   const handleNamePress = () => {
-      navigation.navigate(Profile); 
+      navigation.navigate(Profile);
   };
     const handleLoginPress = () => {
-        navigation.navigate(SignIn); 
+        navigation.navigate(SignIn);
     };
 
   return (
@@ -39,7 +39,7 @@ const SignUp = () => {
         <Text style={styles.buttonText} onPress={handleNamePress}>Sign Up</Text>
       </TouchableOpacity>
       <Text style={styles.alt}>
-        Already have an account? <TouchableOpacity style={styles.alt2}><Text style={styles.alttext} onPress={handleLoginPress}>Login</Text></TouchableOpacity>
+        Already have an account? <TouchableOpacity onPress={handleLoginPress}><Text style={styles.alttext} >Login</Text></TouchableOpacity>
       </Text>
       </SafeAreaView>
     </View>
