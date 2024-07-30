@@ -9,7 +9,7 @@ import VehicleInfo from '../Vehicle_Info/Vehicle_Info'
 const ImageUpload = ({ }) => {
   const navigation = useNavigation();
   const handleNextScreen = () => {
-    navigation.navigate(VehicleInfo); 
+    navigation.navigate(VehicleInfo);
 };
   const [profileImage, setProfileImage] = useState(null);
 
@@ -23,12 +23,12 @@ const ImageUpload = ({ }) => {
   };
 
   return (
-    
+
     <SafeAreaView style={styles.safeArea}>
     <View style={styles.container}>
       <View style={styles.nav}>
         <TouchableOpacity onPress={() => navigation.goBack()}>
-        <Text style={styles.navText} >←</Text> 
+        <Text style={styles.navText} >←</Text>
         </TouchableOpacity>
         <Text style={styles.header}>Add Picture</Text>
       </View>

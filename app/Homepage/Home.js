@@ -21,7 +21,7 @@ const MainScreen = ({ navigation }) => {
   const toggleSwitch = () => setIsOnline(previousState => !previousState);
 
   const handleAcceptButtonPress = () => {
-    navigation.navigate(Trip); 
+    navigation.navigate(Trip);
   };
 
   return (

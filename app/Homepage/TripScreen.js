@@ -7,6 +7,7 @@ import Icon from 'react-native-vector-icons/FontAwesome';
 import ChatScreen from './ChatScreen';
 
 const Trip = ({ }) => {
+
   const [buttonText, setButtonText] = useState('Start Pickup');
   const slideAnim = useRef(new Animated.Value(Dimensions.get('window').height)).current; // Start off-screen
 
@@ -32,7 +33,7 @@ const Trip = ({ }) => {
 
   const navigation = useNavigation();
   const handleChatScreen = () => {
-    navigation.navigate(ChatScreen); 
+    navigation.navigate(ChatScreen);
   };
 
   return (
