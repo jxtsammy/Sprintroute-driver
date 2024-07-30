@@ -13,7 +13,7 @@ const SignUp = () => {
 
   return (
     <View style={styles.container}>
-      <SafeAreaView>
+      <SafeAreaView style={styles.safeArea}>
       <Text style={styles.header}>Create your account</Text><TextInput
           style={[styles.input, styles.email]}
           placeholder="Enter Email here"          placeholderTextColor="black"
@@ -50,6 +50,10 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     backgroundColor: '',
     padding: 20,
+  },
+  safeArea: {
+    width: '100%',
+    alignItems: 'center',
   },
   header: {
     fontSize: 35,
