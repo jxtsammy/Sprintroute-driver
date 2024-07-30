@@ -1,46 +1,48 @@
-import React from 'react'
+// app/Options/Login.js
+import React from 'react';
 import { SafeAreaView, StyleSheet, Text, View, TextInput, TouchableOpacity } from 'react-native';
-import SignUp from './SignUp'
-import { useNavigation } from '@react-navigation/native'
-import Verification_Prompt from '../Verification/Verification_Prompt'
+import { useNavigation } from '@react-navigation/native';
 
+const Login = () => {
+  const navigation = useNavigation();
 
-const Login = () =>{
-    const navigation = useNavigation();
-    const handleSignUpPress = () => {
-        navigation.navigate(SignUp); 
-    };
-    const handleLogInPess = () => {
-          navigation.navigate(Verification_Prompt); 
-    };
+  const handleSignUpPress = () => {
+    navigation.navigate('SignUp'); // Use the screen name
+  };
+
+  const handleLogInPress = () => {
+    navigation.navigate('VerificationPrompt'); // Use the screen name
+  };
+
   return (
     <View style={styles.container}>
       <SafeAreaView>
-      <Text style={styles.header}>Login your account</Text>
-      <View style={styles.inputGroup}>
-        <TextInput
-          style={[styles.input, styles.ccode]}
-          placeholder="+"
-          keyboardType="phone-pad"
-          placeholderTextColor="black"
-        />
-        <TextInput
-          style={[styles.input, styles.number]}
-          placeholder="phone"
-          keyboardType="phone-pad"
-          required
-        />
-      </View>
-      <TouchableOpacity style={[styles.button, styles.continueButton]} onPress={handleLogInPess}>
-        <Text style={styles.buttonText} >Login</Text>
-      </TouchableOpacity>
-      <Text style={styles.alt}>
-        Dont have an account? <TouchableOpacity style={styles.alt2} onPress={handleSignUpPress}><Text style={styles.alttext}>Sign Up</Text></TouchableOpacity>
-      </Text>
+        <Text style={styles.header}>Login your account</Text>
+        <View style={styles.inputGroup}>
+          <TextInput
+            style={[styles.input, styles.ccode]}
+            placeholder="+"
+            keyboardType="phone-pad"
+            placeholderTextColor="black"
+          />
+          <TextInput
+            style={[styles.input, styles.number]}
+            placeholder="phone"
+            keyboardType="phone-pad"
+            required
+          />
+        </View>
+        <TouchableOpacity style={[styles.button, styles.continueButton]} onPress={handleLogInPress}>
+          <Text style={styles.buttonText}>Login</Text>
+        </TouchableOpacity>
+        <Text style={styles.alt}>
+          Don't have an account? <TouchableOpacity style={styles.alt2} onPress={handleSignUpPress}><Text style={styles.alttext}>Sign Up</Text></TouchableOpacity>
+        </Text>
       </SafeAreaView>
     </View>
   );
-}
+};
+
 
 const styles = StyleSheet.create({
   container: {
