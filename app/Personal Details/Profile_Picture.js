@@ -2,14 +2,13 @@ import React from 'react'
 import { useState } from 'react';
 import { View, Image, StyleSheet, SafeAreaView, TouchableOpacity, Text } from 'react-native';
 import { launchCamera } from 'react-native-image-picker';
-import icon from '../../assets/Placeholder.png'
 import { useNavigation } from '@react-navigation/native'
 import VehicleInfo from '../Vehicle_Info/Vehicle_Info'
 
 const ImageUpload = ({ navigation }) => {
   const navigation = useNavigation();
   const handleNextScreen = () => {
-    navigation.navigate(VehicleInfo); 
+    navigation.navigate(VehicleInfo);
 };
   const [profileImage, setProfileImage] = useState(null);
 
@@ -23,12 +22,12 @@ const ImageUpload = ({ navigation }) => {
   };
 
   return (
-    
+
     <SafeAreaView style={styles.safeArea}>
     <View style={styles.container}>
       <View style={styles.nav}>
         <TouchableOpacity onPress={() => navigation.goBack()}>
-        <Text style={styles.navText} >←</Text> 
+        <Text style={styles.navText} >←</Text>
         </TouchableOpacity>
         <Text style={styles.header}>Add Picture</Text>
       </View>
@@ -36,7 +35,7 @@ const ImageUpload = ({ navigation }) => {
       <View style={styles.imageContainer}>
         <TouchableOpacity onPress={selectImage}>
           <Image
-            source={profileImage ? { uri: profileImage } : require(icon)}
+            source={profileImage ? { uri: profileImage } : require('../../assets/Placeholder.png')}
             style={styles.profileImage}
           />
         </TouchableOpacity>

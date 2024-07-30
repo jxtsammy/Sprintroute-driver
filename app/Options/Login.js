@@ -8,10 +8,10 @@ import Verification_Prompt from '../Verification/Verification_Prompt'
 const Login = () =>{
     const navigation = useNavigation();
     const handleSignUpPress = () => {
-        navigation.navigate(SignUp); 
+        navigation.navigate(SignUp);
     };
     const handleLogInPess = () => {
-          navigation.navigate(Verification_Prompt); 
+          navigation.navigate(Verification_Prompt);
     };
   return (
     <View style={styles.container}>
@@ -35,7 +35,7 @@ const Login = () =>{
         <Text style={styles.buttonText} >Login</Text>
       </TouchableOpacity>
       <Text style={styles.alt}>
-        Dont have an account? <TouchableOpacity style={styles.alt2} onPress={handleSignUpPress}><Text style={styles.alttext}>Sign Up</Text></TouchableOpacity>
+        Dont have an account? <TouchableOpacity onPress={handleSignUpPress}><Text style={styles.alttext}>Sign Up</Text></TouchableOpacity>
       </Text>
       </SafeAreaView>
     </View>
