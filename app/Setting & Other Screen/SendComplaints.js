@@ -1,7 +1,9 @@
+import { useNavigation } from '@react-navigation/native';
 import React, { useState } from 'react';
 import { View, Text, TextInput, TouchableOpacity, StyleSheet, Image, ScrollView, SafeAreaView } from 'react-native';
 
 const ComplaintPage = () => {
+  const navigation = useNavigation();
   const [complaintText, setComplaintText] = useState('');
 
   return (
