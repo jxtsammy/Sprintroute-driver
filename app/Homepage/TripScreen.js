@@ -4,7 +4,7 @@ import MapView, { Marker, Polyline } from 'react-native-maps';
 import { Avatar } from 'react-native-elements';
 import { useNavigation } from '@react-navigation/native';
 import Icon from 'react-native-vector-icons/FontAwesome';
-import ChatScreen from './ChatScreen';
+
 
 const Trip = ({ }) => {
 
@@ -33,7 +33,7 @@ const Trip = ({ }) => {
 
   const navigation = useNavigation();
   const handleChatScreen = () => {
-    navigation.navigate(ChatScreen);
+    navigation.navigate('ChatScreen');
   };
 
   return (

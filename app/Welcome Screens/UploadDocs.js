@@ -1,16 +1,15 @@
 import React from 'react';
 import { View, Text, StyleSheet, Image, TouchableOpacity} from 'react-native';
 import { useNavigation } from '@react-navigation/native'
-import EarnMoney from './EarnMoney'
 
 const UploadDocScreen = () => {
     const navigation = useNavigation();
   const handleNextScreen = () => {
-    navigation.navigate(EarnMoney); 
+    navigation.navigate('EarnMoney');
   };
   return (
     <View style={styles.container}>
-      
+
       <Text style={styles.title}>Upload Documents</Text>
       <Text style={styles.subtitle}>
         Upload required personal info and other required document to complete registration.
@@ -36,8 +35,8 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
 
-   
- 
+
+
   title: {
     fontSize: 28,
     fontWeight: 'bold',

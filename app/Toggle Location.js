@@ -2,12 +2,11 @@ import React from 'react'
 import { useNavigation } from '@react-navigation/native'
 import { View, Text, TouchableOpacity, StyleSheet, Image } from 'react-native';
 import * as Location from 'expo-location';
-import Login from './Options/Login'
 
 const ToggleLocation = () => {
     const navigation = useNavigation();
     const handleNextScreen = () => {
-            navigation.navigate(Login); 
+            navigation.navigate('Login');
       };
   const enableLocation = async () => {
     let { status } = await Location.requestForegroundPermissionsAsync();

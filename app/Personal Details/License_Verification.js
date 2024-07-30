@@ -2,13 +2,12 @@ import React from 'react'
 import { useNavigation } from '@react-navigation/native';
 import { View, Text, TouchableOpacity, Image, StyleSheet, SafeAreaView } from 'react-native';
 import * as ImagePicker from 'expo-image-picker';
-import BankDetails from '../Payment_Details/Bank_Details'
 
 const DriverLicenseVerification = () => {
   const [image, setImage] = useState(null);
   const navigation = useNavigation();
     const handleNextScreen = () => {
-            navigation.navigate(BankDetails); 
+            navigation.navigate('Bank_Details');
       };
 
   const pickImage = async () => {
@@ -51,7 +50,7 @@ const DriverLicenseVerification = () => {
       <SafeAreaView>
         <View style={styles.nav}>
         <TouchableOpacity onPress={() => navigation.goBack()}>
-        <Text style={styles.navText} >←</Text> 
+        <Text style={styles.navText} >←</Text>
         </TouchableOpacity>
         <Text style={styles.header}>Verify License</Text>
       </View>

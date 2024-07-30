@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import { View, Text, TouchableOpacity, StyleSheet, Image, SafeAreaView} from 'react-native';
 import RNPickerSelect from 'react-native-picker-select';
 import { useNavigation } from '@react-navigation/native';
-import LicenceVerification from '../Personal Details/License_Verification'
+
 
 const DatePicker = () => {
    const [year, setYear] = useState('');
@@ -10,7 +10,7 @@ const DatePicker = () => {
   const [day, setDay] = useState('');
   const navigation = useNavigation();
     const handleNextScreen = () => {
-            navigation.navigate(LicenceVerification, { year, month, day }); 
+            navigation.navigate('License_Verification', { year, month, day });
       };
 
   const years = Array.from({ length: 11 }, (_, i) => ({ label: `${2020 + i}`, value: `${2020 + i}` }));
@@ -35,7 +35,7 @@ const DatePicker = () => {
      <SafeAreaView>
         <View style={styles.nav}>
         <TouchableOpacity onPress={() => navigation.goBack()}>
-        <Text style={styles.navText} >←</Text> 
+        <Text style={styles.navText} >←</Text>
         </TouchableOpacity>
         <Text style={styles.header}>Road Worthiness</Text>
       </View>
@@ -126,10 +126,10 @@ const styles = StyleSheet.create({
         width: '95%',
         flexDirection: 'row',
         justifyContent: 'space-between',
-     
+
   },
   inputDate: {
-        width: '30%', 
+        width: '30%',
         height: '100%',
         borderWidth: 1,
         borderColor: 'black',

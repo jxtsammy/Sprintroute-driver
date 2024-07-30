@@ -4,16 +4,6 @@ import { createDrawerNavigator, DrawerItem, DrawerContentScrollView } from '@rea
 import { NavigationContainer} from '@react-navigation/native';
 import Icon from 'react-native-vector-icons/Feather';
 
-import Invite from '../InviteScreen/InviteScreen';
-import MyAccount from '../Setting & Other Screen/MyAccount';
-import History from '../Setting & Other Screen/History';
-import Notifications from '../Setting & Other Screen/Notifications';
-import Safety from '../Setting & Other Screen/Safety';
-import Support from '../Setting & Other Screen/SupportScreen';
-import Logout from '../Options/Login';
-import Languages from '../Setting & Other Screen/Languages';
-import Trip from './TripScreen';
-import ComplaintPage from '../Setting & Other Screen/SendComplaints';
 
 const MainScreen = ({ navigation }) => {
   const [isOnline, setIsOnline] = useState(false);
@@ -21,7 +11,7 @@ const MainScreen = ({ navigation }) => {
   const toggleSwitch = () => setIsOnline(previousState => !previousState);
 
   const handleAcceptButtonPress = () => {
-    navigation.navigate(Trip);
+    navigation.navigate('TripScreen');
   };
 
   return (
@@ -167,18 +157,18 @@ const DrawerContent = ({ navigation }) => (
         <Text style={drawerStyles.profileName}>Driver Name </Text>
       </View>
       <View style={drawerStyles.menuItems}>
-      <DrawerItem label="Home" onPress={() => navigation.navigate(MainScreen)} />
-        <DrawerItem label="My Account" onPress={() => navigation.navigate(MyAccount)} />
-        <DrawerItem label="History" onPress={() => navigation.navigate(History)} />
-        <DrawerItem label="Notifications" onPress={() => navigation.navigate(Notifications)} />
-        <DrawerItem label="Languages" onPress={() => navigation.navigate(Languages)} />
-        <DrawerItem label="Safety" onPress={() => navigation.navigate(Safety)} />
-        <DrawerItem label="Support and FAQ" onPress={() => navigation.navigate(Support)} />
-        <DrawerItem label="Make Complaints" onPress={() => navigation.navigate(ComplaintPage)} />
-        <DrawerItem label="Invite Friends" onPress={() => navigation.navigate(Invite)} />
+      <DrawerItem label="Home" onPress={() => navigation.navigate('Home')} />
+        <DrawerItem label="My Account" onPress={() => navigation.navigate('MyAccount')} />
+        <DrawerItem label="History" onPress={() => navigation.navigate('History')} />
+        <DrawerItem label="Notifications" onPress={() => navigation.navigate('Notifications')} />
+        <DrawerItem label="Languages" onPress={() => navigation.navigate('Languages')} />
+        <DrawerItem label="Safety" onPress={() => navigation.navigate('Safety')} />
+        <DrawerItem label="Support and FAQ" onPress={() => navigation.navigate('SupportScreen')} />
+        <DrawerItem label="Make Complaints" onPress={() => navigation.navigate('SendComplaints')} />
+        <DrawerItem label="Invite Friends" onPress={() => navigation.navigate('InviteScreen')} />
         <DrawerItem label="About" onPress={() => navigation.navigate('About')} />
         <DrawerItem label="Privacy Policy & Terms" onPress={() => navigation.navigate('PrivacyPolicy')} />
-        <DrawerItem label="Logout" onPress={() => navigation.navigate(Logout)} style={styles.logout} />
+        <DrawerItem label="Logout" onPress={() => navigation.navigate('Login')} style={styles.logout} />
       </View>
     </View>
   </DrawerContentScrollView>
@@ -190,18 +180,18 @@ const App = () => {
   return (
     <NavigationContainer>
       <Drawer.Navigator drawerContent={props => <DrawerContent {...props} />}>
-        <Drawer.Screen name="Home" component={MainScreen} />
-        <Drawer.Screen name="MyAccount" component={MyAccount} />
-        <Drawer.Screen name="History" component={History} />
-        <Drawer.Screen name="Notifications" component={Notifications} />
-        <Drawer.Screen name="Languages" component={Languages} />
-        <Drawer.Screen name="Safety" component={Safety} />
-        <Drawer.Screen name="Support" component={Support} />
-        <Drawer.Screen name="ComplaintPage" component={ComplaintPage} />
-        <Drawer.Screen name="Invite" component={Invite} />
+        <Drawer.Screen name="Home" component={'Home'} />
+        <Drawer.Screen name="MyAccount" component={'MyAccount'} />
+        <Drawer.Screen name="History" component={'History'} />
+        <Drawer.Screen name="Notifications" component={'Notifications'} />
+        <Drawer.Screen name="Languages" component={'Languages'} />
+        <Drawer.Screen name="Safety" component={'Safety'} />
+        <Drawer.Screen name="Support" component={'SupportScreen'} />
+        <Drawer.Screen name="ComplaintPage" component={'SendComplaints'} />
+        <Drawer.Screen name="Invite" component={'InviteScreen'} />
         <Drawer.Screen name="About" component={() => <View><Text>About</Text></View>} />
         <Drawer.Screen name="PrivacyPolicy" component={() => <View><Text>Privacy Policy & Terms</Text></View>} />
-        <Drawer.Screen name="Logout" component={Logout} />
+        <Drawer.Screen name="Logout" component={'Login'} />
       </Drawer.Navigator>
     </NavigationContainer>
   );
