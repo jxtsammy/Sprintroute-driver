@@ -1,20 +1,19 @@
 import React from 'react'
 import { useNavigation } from '@react-navigation/native'
 import { View, Text, TextInput, TouchableOpacity, StyleSheet, SafeAreaView } from 'react-native';
-import VehicleImage from './Vehicle_Image'
 
 
 const VehicleInfo = () => {
     const navigation = useNavigation();
     const handleLicenseInfoPress = () => {
-            navigation.navigate(VehicleImage); 
+            navigation.navigate('Vehicle_Image');
       };
     return (
            <SafeAreaView style={styles.safeArea}>
                 <View style={styles.container}>
                     <View style={styles.nav}>
                         <TouchableOpacity onPress={() => navigation.goBack()}>
-                            <Text style={styles.navText} >←</Text> 
+                            <Text style={styles.navText} >←</Text>
                         </TouchableOpacity>
                         <Text style={styles.header}>Vehicle Information</Text>
                     </View>

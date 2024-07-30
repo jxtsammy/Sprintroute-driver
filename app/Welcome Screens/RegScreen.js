@@ -1,19 +1,18 @@
 import React from 'react';
 import { View, Text, StyleSheet, Image, TouchableOpacity} from 'react-native';
 import { useNavigation } from '@react-navigation/native'
-import UploadDoc from './UploadDocs'
 
 const RegisterVehicleScreen = () => {
     const navigation = useNavigation();
   const handleNextScreen = () => {
-        navigation.navigate(UploadDoc); 
+        navigation.navigate('UploadDocs');
   };
   return (
     <View style={styles.container}>
-      
+
       <Text style={styles.title}>Register Vehicle</Text>
       <Text style={styles.subtitle}>
-        Register your vehicle with all the required legal documents 
+        Register your vehicle with all the required legal documents
       </Text>
       <Image source={require('../../assets/RegisterCar.png')} style={styles.image} />
       <View style={styles.pagination}>
@@ -36,8 +35,8 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
 
-   
- 
+
+
   title: {
     fontSize: 28,
     fontWeight: 'bold',

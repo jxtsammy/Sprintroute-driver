@@ -7,7 +7,6 @@ import {
   StyleSheet
 } from "react-native";
 import { useNavigation } from '@react-navigation/native'
-import SuccessMsg from '../SuccessMsg'
 
 const OTP_Verifications = () => {
   const [otp, setOtp] = useState(["", "", "", ""]);
@@ -15,7 +14,7 @@ const OTP_Verifications = () => {
   const [newOtpRequestText, setNewOtpRequestText] = useState("Request new OTP");
   const navigation = useNavigation();
   const handleNextScreen = () => {
-    navigation.navigate(SuccessMsg); 
+    navigation.navigate('SuccessMsg');
   };
 
   const handleChange = (text, index) => {

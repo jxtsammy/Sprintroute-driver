@@ -2,24 +2,22 @@ import React from 'react';
 import { View, Text, Image, StyleSheet, TouchableOpacity, ScrollView, SafeAreaView } from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import { useNavigation } from '@react-navigation/native'
-import EditProfile from './EditProfileScreen'
-import AddBank from './AddBank'
 
 const MyAccountPage = () => {
     const navigation = useNavigation();
     const handleNextScreen = () => {
-      navigation.navigate(EditProfile); 
+      navigation.navigate('EditProfileScreen');
     };
 
     const handleAddBankScreen = () => {
-            navigation.navigate(AddBank); 
+            navigation.navigate('AddBank');
       };
   return (
     <ScrollView style={styles.container}>
     <SafeAreaView>
         <View style={styles.nav}>
         <TouchableOpacity onPress={() => navigation.goBack()}>
-        <Text style={styles.navText} >←</Text> 
+        <Text style={styles.navText} >←</Text>
         </TouchableOpacity>
         <Text style={styles.header}>My Account</Text>
       </View>
@@ -46,7 +44,7 @@ const MyAccountPage = () => {
             <Text style={styles.bankType}>Primary account</Text>
           </View>
         </View>
-        
+
         <TouchableOpacity style={styles.editIcon}>
           <Icon name="pencil" size={24} color="orange" />
         </TouchableOpacity>
@@ -99,7 +97,7 @@ navText: {
     fontWeight: 600,
     marginRight: 10
   },
-  
+
   profileContainer: {
     flexDirection: 'row',
     alignItems: 'center',

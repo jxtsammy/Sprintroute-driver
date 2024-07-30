@@ -2,13 +2,12 @@ import React, { useState } from 'react';
 import { View, Text, TouchableOpacity, Image, StyleSheet, SafeAreaView } from 'react-native';
 import { useNavigation } from '@react-navigation/native'
 import * as ImagePicker from 'expo-image-picker';
-import RoadWorthiness from './Road_Worthiness'
 
 const VehicleImages = () => {
   const [image, setImage] = useState(null);
   const navigation = useNavigation();
     const handleNextScreen = () => {
-            navigation.navigate(RoadWorthiness); 
+            navigation.navigate('Road_Worthiness');
       };
 
   const pickImage = async () => {
@@ -52,7 +51,7 @@ const VehicleImages = () => {
       <SafeAreaView>
         <View style={styles.nav}>
         <TouchableOpacity onPress={() => navigation.goBack()}>
-        <Text style={styles.navText} >←</Text> 
+        <Text style={styles.navText} >←</Text>
         </TouchableOpacity>
         <Text style={styles.header}>Car Images</Text>
       </View>

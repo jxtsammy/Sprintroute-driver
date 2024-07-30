@@ -1,16 +1,15 @@
 import React from 'react';
 import { View, Text, StyleSheet, Image, TouchableOpacity} from 'react-native';
 import { useNavigation } from '@react-navigation/native'
-import EnableLocation from '../Toggle Location';
 
 const EarnMoneyScreen = () => {
     const navigation = useNavigation();
   const handleNextScreen = () => {
-    navigation.navigate(EnableLocation); 
+    navigation.navigate('Toggle Location');
   };
   return (
     <View style={styles.container}>
-      
+
       <Text style={styles.title}>Earn Money</Text>
       <Text style={styles.subtitle}>
         Complete the registration and start earning some Sprint money 🎉.
@@ -36,8 +35,8 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
 
-   
- 
+
+
   title: {
     fontSize: 28,
     fontWeight: 'bold',

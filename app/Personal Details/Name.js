@@ -1,13 +1,12 @@
 import React from 'react'
 import { useNavigation } from '@react-navigation/native';
 import { View, Text, TextInput, TouchableOpacity, StyleSheet, SafeAreaView } from 'react-native';
-import addProfilePicture from './Profile_Picture'
 
 
 const Name = () => {
     const navigation = useNavigation();
     const handleAddProfile = () => {
-            navigation.navigate(addProfilePicture);
+            navigation.navigate('Profile_Picture');
       };
     return (
            <SafeAreaView style={styles.safeArea}>

@@ -1,17 +1,14 @@
 import React from 'react'
 import { useNavigation } from '@react-navigation/native'
 import { SafeAreaView, StyleSheet, Text, View, TextInput, TouchableOpacity } from 'react-native';
-import SignIn from './Login';
-import Profile from '../Personal Details/Name'
-
 
 const SignUp = () => {
   const navigation = useNavigation();
   const handleNamePress = () => {
-      navigation.navigate(Profile);
+      navigation.navigate('Personal Details');
   };
     const handleLoginPress = () => {
-        navigation.navigate(SignIn);
+        navigation.navigate('Login');
     };
 
   return (

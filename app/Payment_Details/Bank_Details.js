@@ -1,19 +1,18 @@
 import React from 'react';
 import { View, Text, TouchableOpacity, StyleSheet, Image, SafeAreaView, TextInput } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
-import Mobile_Verification from '../Verification/Verification_Prompt'
 
 const PaymentDetails = () => {
     const navigation = useNavigation();
     const handleNextScreen = () => {
-            navigation.navigate(Mobile_Verification); 
+            navigation.navigate('Verification_Prompt');
       };
   return (
     <View style={styles.container}>
      <SafeAreaView>
         <View style={styles.nav}>
         <TouchableOpacity onPress={() => navigation.goBack()}>
-        <Text style={styles.navText} >←</Text> 
+        <Text style={styles.navText} >←</Text>
         </TouchableOpacity>
         <Text style={styles.header}>Payment Details</Text>
       </View>
@@ -28,7 +27,7 @@ const PaymentDetails = () => {
       <View style={styles.inputGroup}>
                         <TextInput  style={styles.bname} placeholder="Bank Name"  placeholderTextColor="grey"/>
                         <TextInput style={styles.accNo} placeholder="Account Name" placeholderTextColor="grey"/>
-                        <TextInput style={styles.accNo} placeholder="Account No" placeholderTextColor="grey"/> 
+                        <TextInput style={styles.accNo} placeholder="Account No" placeholderTextColor="grey"/>
       </View>
       <TouchableOpacity style={styles.button}>
         <Text style={styles.buttonText} onPress={handleNextScreen}>Continue</Text>
