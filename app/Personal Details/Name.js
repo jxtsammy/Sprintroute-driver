@@ -51,7 +51,7 @@ const ProfileSettings = () => {
           source={
             profilePic
               ? { uri: profilePic }
-              : require('../assets/Placeholder.png') // Provide a placeholder image
+              : require('../../assets/Placeholder.png') // Provide a placeholder image
           }
           style={styles.profilePic}
         />

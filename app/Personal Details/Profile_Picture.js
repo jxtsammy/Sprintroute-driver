@@ -2,11 +2,11 @@ import React from 'react'
 import { useState } from 'react';
 import { View, Image, StyleSheet, SafeAreaView, TouchableOpacity, Text } from 'react-native';
 import { launchCamera } from 'react-native-image-picker';
-import icon from '../../assets/Placeholder.png'
+import icon from '../../assets/Placeholder.png';
 import { useNavigation } from '@react-navigation/native'
 import VehicleInfo from '../Vehicle_Info/Vehicle_Info'
 
-const ImageUpload = ({ navigation }) => {
+const ImageUpload = ({ }) => {
   const navigation = useNavigation();
   const handleNextScreen = () => {
     navigation.navigate(VehicleInfo); 
@@ -36,7 +36,7 @@ const ImageUpload = ({ navigation }) => {
       <View style={styles.imageContainer}>
         <TouchableOpacity onPress={selectImage}>
           <Image
-            source={profileImage ? { uri: profileImage } : require(icon)}
+            source={profileImage ? { uri: profileImage } : require('../../assets/Placeholder.png')}
             style={styles.profileImage}
           />
         </TouchableOpacity>
