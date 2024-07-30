@@ -24,7 +24,7 @@ const data = [
 ];
 
 
-const HistoryScreen = () => {
+const History = () => {
     const navigation = useNavigation();
     const renderItem = ({ item }) => (
     <View style={styles.card}>
@@ -169,4 +169,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default HistoryScreen;
+export default History;

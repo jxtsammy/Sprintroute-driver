@@ -2,14 +2,15 @@ import React, { useState } from 'react';
 import { View, Text, StyleSheet, Image, Switch, TouchableOpacity, ScrollView, SafeAreaView } from 'react-native';
 import { createDrawerNavigator, DrawerItem, DrawerContentScrollView } from '@react-navigation/drawer';
 import { NavigationContainer} from '@react-navigation/native';
+import { useNavigation } from '@react-navigation/native';
 import Icon from 'react-native-vector-icons/Feather';
 
 
-const MainScreen = ({ navigation }) => {
+const MainScreen = ({}) => {
   const [isOnline, setIsOnline] = useState(false);
 
   const toggleSwitch = () => setIsOnline(previousState => !previousState);
-
+  const navigation = useNavigation();
   const handleAcceptButtonPress = () => {
     navigation.navigate('TripScreen');
   };
@@ -149,7 +150,9 @@ const MainScreen = ({ navigation }) => {
   );
 };
 
-const DrawerContent = ({ navigation }) => (
+const DrawerContent = ({}) => {
+  const navigation = useNavigation();
+  return (
   <DrawerContentScrollView>
     <View style={drawerStyles.container}>
       <View style={drawerStyles.profileContainer}>
@@ -172,7 +175,8 @@ const DrawerContent = ({ navigation }) => (
       </View>
     </View>
   </DrawerContentScrollView>
-);
+  )
+};
 
 const Drawer = createDrawerNavigator();
 
@@ -197,7 +201,7 @@ const App = () => {
   );
 };
 
-export default App;
+export default MainScreen;
 
 // Styles
 const styles = StyleSheet.create({

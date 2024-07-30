@@ -76,7 +76,7 @@ const Name = () => {
         onChangeText={setNewPassword}
         secureTextEntry
       />
-      <TouchableOpacity style={[styles.button, styles.continue]} onPress={handleSave}>
+      {/* <TouchableOpacity style={[styles.button, styles.continue]} onPress={handleSave}>
                         <Text style={styles.buttonText} onPress={handleNextScreen}>Save</Text>
 
 //                     <View style={styles.inputGroup}>
@@ -85,7 +85,7 @@ const Name = () => {
 //                     </View>
 //                     <TouchableOpacity style={[styles.button, styles.continue]} onPress={handleAddProfile}>
 //                         <Text style={styles.buttonText}>Continue</Text>
-                    </TouchableOpacity>
+                    </TouchableOpacity> */}
                 </View>
            </SafeAreaView>
     );
