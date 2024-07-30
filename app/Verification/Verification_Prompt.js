@@ -1,13 +1,12 @@
 import React from 'react';
 import { View, Text, TouchableOpacity, StyleSheet, Image } from 'react-native';
-import phoneVerification from './OTP_Verification'
-import { useNavigation } from '@react-navigation/native'; 
+import { useNavigation } from '@react-navigation/native';
 
 const Verification_Prompt = () => {
 
   const navigation = useNavigation();
     const handleOTPRequest = () => {
-        navigation.navigate(phoneVerification);
+        navigation.navigate('OTP_Verification');
     };
     return (
         <View style={styles.body}>
