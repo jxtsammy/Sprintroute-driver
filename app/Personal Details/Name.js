@@ -78,7 +78,7 @@ const Name = () => {
       />
       <TouchableOpacity style={[styles.button, styles.continue]} onPress={handleSave}>
                         <Text style={styles.buttonText} onPress={handleNextScreen}>Save</Text>
-
+        </TouchableOpacity>
 //                     <View style={styles.inputGroup}>
 //                         <TextInput  style={styles.fname} placeholder="First Name"  placeholderTextColor="#555555"/>
 //                         <TextInput style={styles.lname} placeholder="Last Name" placeholderTextColor="#555555"/>

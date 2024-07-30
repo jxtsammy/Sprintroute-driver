@@ -5,7 +5,7 @@ import { SafeAreaView, StyleSheet, Text, View, TextInput, TouchableOpacity } fro
 const SignUp = () => {
   const navigation = useNavigation();
   const handleNamePress = () => {
-      navigation.navigate('Personal Details');
+      navigation.navigate('Name');
   };
     const handleLoginPress = () => {
         navigation.navigate('Login');
