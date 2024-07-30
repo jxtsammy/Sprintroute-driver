@@ -11,7 +11,7 @@ const Login = () => {
   };
 
   const handleLogInPress = () => {
-    navigation.navigate('VerificationPrompt'); // Use the screen name
+    navigation.navigate('Verification_Prompt'); // Use the screen name
   };
 
   return (

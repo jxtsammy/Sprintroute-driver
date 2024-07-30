@@ -5,7 +5,7 @@ import { useNavigation } from '@react-navigation/native'
 const EarnMoneyScreen = () => {
     const navigation = useNavigation();
   const handleNextScreen = () => {
-    navigation.navigate('Toggle Location');
+    navigation.navigate('ToggleLocation');
   };
   return (
     <View style={styles.container}>
