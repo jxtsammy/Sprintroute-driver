@@ -1,6 +1,6 @@
 import React from 'react'
 import { useNavigation } from '@react-navigation/native';
-import { View, Text, TextInput, TouchableOpacity, StyleSheet, SafeAreaView } from 'react-native';
+import { View, Text, Image, TextInput, TouchableOpacity, StyleSheet, SafeAreaView } from 'react-native';
 
 
 const Name = () => {
@@ -18,7 +18,7 @@ const Name = () => {
                         <Text style={styles.header}>Enter Name</Text>
                 </View>
       <View style={styles.UserInfo}>
-        <TouchableOpacity onPress={handleChoosePhoto}>
+        <TouchableOpacity onPress={handleAddProfile}>
         <Image
           source={
             profilePic
@@ -79,12 +79,12 @@ const Name = () => {
       {/* <TouchableOpacity style={[styles.button, styles.continue]} onPress={handleSave}>
                         <Text style={styles.buttonText} onPress={handleNextScreen}>Save</Text>
         </TouchableOpacity>
-//                     <View style={styles.inputGroup}>
-//                         <TextInput  style={styles.fname} placeholder="First Name"  placeholderTextColor="#555555"/>
-//                         <TextInput style={styles.lname} placeholder="Last Name" placeholderTextColor="#555555"/>
-//                     </View>
-//                     <TouchableOpacity style={[styles.button, styles.continue]} onPress={handleAddProfile}>
-//                         <Text style={styles.buttonText}>Continue</Text>
+                    <View style={styles.inputGroup}>
+                     <TextInput  style={styles.fname} placeholder="First Name"  placeholderTextColor="#555555"/>
+                     <TextInput style={styles.lname} placeholder="Last Name" placeholderTextColor="#555555"/>
+                  </View>
+                   <TouchableOpacity style={[styles.button, styles.continue]} onPress={handleAddProfile}>
+                      <Text style={styles.buttonText}>Continue</Text>
                     </TouchableOpacity> */}
                 </View>
            </SafeAreaView>
