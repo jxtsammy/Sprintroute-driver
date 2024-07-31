@@ -35,6 +35,7 @@ import ToggleLocation from './app/Toggle Location';
 const Stack = createStackNavigator();
 const Drawer = createDrawerNavigator();
 
+
 const DrawerContent = (props) => {
   const { navigation } = props;
   return (
