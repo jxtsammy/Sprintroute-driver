@@ -6,7 +6,7 @@ import { useNavigation } from '@react-navigation/native';
 const ChatScreen = () => {
   const [messages, setMessages] = useState([]);
   const [inputText, setInputText] = useState('');
-  
+
 
   const sendMessage = () => {
     if (inputText.trim().length > 0) {
@@ -37,7 +37,7 @@ const ChatScreen = () => {
         <View style={styles.headerLeft}>
           <Image source={require('../../assets/Placeholder.png')} style={styles.profileImage} />
           <View style={styles.headerTextContainer}>
-            <Text style={styles.profileName}>Driver ID</Text>
+            <Text style={styles.profileName}>Michael Anang</Text>
             <Text style={styles.status}>Active now</Text>
           </View>
         </View>

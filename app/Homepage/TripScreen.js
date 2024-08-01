@@ -72,7 +72,7 @@ const Trip = ({ }) => {
             size="medium"
           />
           <View style={styles.riderDetails}>
-            <Text style={styles.riderName}>Customer Name</Text>
+            <Text style={styles.riderName}>Michael Anang</Text>
             <Text style={styles.riderRating}>15 Min</Text>
           </View>
           <TouchableOpacity style={styles.iconButton}>

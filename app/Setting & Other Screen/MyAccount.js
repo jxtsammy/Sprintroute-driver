@@ -28,9 +28,9 @@ const MyAccountPage = () => {
           style={styles.profileImage}
         />
         <View style={styles.profileDetails}>
-          <Text style={styles.profileName}>Username</Text>
-          <Text style={styles.profileEmail}>user@email.com</Text>
-          <Text style={styles.profilePhone}>Phone No</Text>
+          <Text style={styles.profileName}>Sallo Samuel</Text>
+          <Text style={styles.profileEmail}>robertflames001@gmail.com</Text>
+          <Text style={styles.profilePhone}>+233257256751</Text>
         </View>
         <TouchableOpacity style={styles.editIcon} onPress={handleNextScreen}>
           <Icon name="pencil" size={24} color="orange" />

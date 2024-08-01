@@ -56,36 +56,39 @@ const DrawerContent = (props) => {
 
 const StackNavigator = () => {
   return (
-    <Stack.Navigator initialRouteName="Login">
+    <Stack.Navigator initialRouteName="RegScreen">
+      <Stack.Screen name="Login" component={RegScreen} options={{ headerShown: false }} />
+      <Stack.Screen name="Login" component={UploadDocs} options={{ headerShown: false }} />
+      <Stack.Screen name="Login" component={EarnMoney} options={{ headerShown: false }} />
       <Stack.Screen name="Login" component={Login} options={{ headerShown: false }} />
-      <Stack.Screen name="SignUp" component={SignUp} options={{ title: 'Sign Up' }} />
-      <Stack.Screen name="VerificationPrompt" component={Verification_Prompt} options={{ title: 'Verification' }} />
-      <Stack.Screen name="Home" component={Home} options={{ title: 'Home' }} />
-      <Stack.Screen name="ChatScreen" component={ChatScreen} options={{ title: 'Chat' }} />
-      <Stack.Screen name="TripScreen" component={TripScreen} options={{ title: 'Trip' }} />
-      <Stack.Screen name="InviteScreen" component={InviteScreen} options={{ title: 'Invite' }} />
-      <Stack.Screen name="AddBank" component={AddBank} options={{ title: 'Add Bank' }} />
-      <Stack.Screen name="EditProfileScreen" component={EditProfileScreen} options={{ title: 'Edit Profile' }} />
-      <Stack.Screen name="History" component={History} options={{ title: 'History' }} />
-      <Stack.Screen name="Languages" component={Languages} options={{ title: 'Languages' }} />
-      <Stack.Screen name="MyAccount" component={MyAccount} options={{ title: 'My Account' }} />
-      <Stack.Screen name="Notifications" component={Notifications} options={{ title: 'Notifications' }} />
-      <Stack.Screen name="Safety" component={Safety} options={{ title: 'Safety' }} />
-      <Stack.Screen name="SendComplaints" component={SendComplaints} options={{ title: 'Send Complaints' }} />
-      <Stack.Screen name="SupportScreen" component={SupportScreen} options={{ title: 'Support' }} />
-      <Stack.Screen name="License_Verification" component={License_Verification} options={{ title: 'License Verification' }} />
-      <Stack.Screen name="Name" component={Name} options={{ title: 'Name' }} />
-      <Stack.Screen name="Profile_Picture" component={Profile_Picture} options={{ title: 'Profile Picture' }} />
-      <Stack.Screen name="Bank_Details" component={Bank_Details} options={{ title: 'Bank Details' }} />
-      <Stack.Screen name="Vehicle_Info" component={Vehicle_Info} options={{ title: 'Vehicle Info' }} />
-      <Stack.Screen name="Vehicle_Image" component={Vehicle_Image} options={{ title: 'Vehicle Image' }} />
-      <Stack.Screen name="Road_Worthiness" component={Road_Worthiness} options={{ title: 'Road Worthiness' }} />
-      <Stack.Screen name="OTP_Verification" component={OTP_Verification} options={{ title: 'OTP Verification' }} />
-      <Stack.Screen name="EarnMoney" component={EarnMoney} options={{ title: 'Earn Money' }} />
-      <Stack.Screen name="RegScreen" component={RegScreen} options={{ title: 'Register' }} />
-      <Stack.Screen name="UploadDocs" component={UploadDocs} options={{ title: 'Upload Docs' }} />
-      <Stack.Screen name="SuccessMsg" component={SuccessMsg} options={{ title: 'Success' }} />
-      <Stack.Screen name="ToggleLocation" component={ToggleLocation} options={{ title: 'Toggle Location' }} />
+      <Stack.Screen name="SignUp" component={SignUp} options={{ headerShown: false }} />
+      <Stack.Screen name="VerificationPrompt" component={Verification_Prompt} options={{ headerShown: false }} />
+      <Stack.Screen name="Home" component={Home} options={{ headerShown: false }} />
+      <Stack.Screen name="ChatScreen" component={ChatScreen} options={{ headerShown: false }} />
+      <Stack.Screen name="TripScreen" component={TripScreen} options={{ headerShown: false }} />
+      <Stack.Screen name="InviteScreen" component={InviteScreen} options={{ headerShown: false }} />
+      <Stack.Screen name="AddBank" component={AddBank} options={{ headerShown: false }} />
+      <Stack.Screen name="EditProfileScreen" component={EditProfileScreen} options={{ headerShown: false }} />
+      <Stack.Screen name="History" component={History} options={{ headerShown: false }} />
+      <Stack.Screen name="Languages" component={Languages} options={{ headerShown: false }} />
+      <Stack.Screen name="MyAccount" component={MyAccount} options={{ headerShown: false }} />
+      <Stack.Screen name="Notifications" component={Notifications} options={{ headerShown: false }} />
+      <Stack.Screen name="Safety" component={Safety} options={{ headerShown: false }} />
+      <Stack.Screen name="SendComplaints" component={SendComplaints} options={{ headerShown: false }} />
+      <Stack.Screen name="SupportScreen" component={SupportScreen} options={{ headerShown: false }} />
+      <Stack.Screen name="License_Verification" component={License_Verification} options={{ headerShown: false }} />
+      <Stack.Screen name="Name" component={Name} options={{ headerShown: false }} />
+      <Stack.Screen name="Profile_Picture" component={Profile_Picture} options={{ headerShown: false }} />
+      <Stack.Screen name="Bank_Details" component={Bank_Details} options={{ headerShown: false }} />
+      <Stack.Screen name="Vehicle_Info" component={Vehicle_Info} options={{ headerShown: false }} />
+      <Stack.Screen name="Vehicle_Image" component={Vehicle_Image} options={{ headerShown: false }} />
+      <Stack.Screen name="Road_Worthiness" component={Road_Worthiness} options={{ headerShown: false }} />
+      <Stack.Screen name="OTP_Verification" component={OTP_Verification} options={{ headerShown: false }} />
+      <Stack.Screen name="EarnMoney" component={EarnMoney} options={{ headerShown: false }} />
+      <Stack.Screen name="RegScreen" component={RegScreen} options={{ headerShown: false }} />
+      <Stack.Screen name="UploadDocs" component={UploadDocs} options={{ headerShown: false }} />
+      <Stack.Screen name="SuccessMsg" component={SuccessMsg} options={{ headerShown: false }} />
+      <Stack.Screen name="ToggleLocation" component={ToggleLocation} options={{ headerShown: false }} />
     </Stack.Navigator>
   );
 };

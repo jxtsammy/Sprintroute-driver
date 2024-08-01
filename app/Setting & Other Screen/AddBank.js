@@ -16,10 +16,10 @@ const EditCardPage = () => {
       </SafeAreaView>
       <Card style={styles.card}>
         <Text style={styles.cardText}>VISA</Text>
-        <Text style={styles.cardNumber}>Account No</Text>
+        <Text style={styles.cardNumber}>8829393</Text>
         <View style={styles.cardDetails}>
-          <Text style={styles.cardName}>Account Name</Text>
-          <Text style={styles.cardExpiry}>Expiry Date</Text>
+          <Text style={styles.cardName}>Sallo Samuel</Text>
+          <Text style={styles.cardExpiry}>24/05/2025</Text>
         </View>
       </Card>
       <View style={styles.inputContainer}>
