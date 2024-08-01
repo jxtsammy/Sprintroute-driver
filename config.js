@@ -10,5 +10,5 @@ const firebaseConfig = {
 };
 firebase.initializeApp(firebaseConfig)
 const db = firebase.firestore()
-const Driver=db.collection("Drivers")
-module.exports = Driver;
+const drivers=db.collection("Drivers")
+module.exports = drivers;

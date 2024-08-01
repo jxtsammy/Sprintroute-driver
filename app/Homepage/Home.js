@@ -36,14 +36,14 @@ const MainScreen = ({}) => {
       <View style={styles.profileContainer}>
         <Image source={require('../../assets/Placeholder.png')} style={styles.profileImage} />
         <View>
-          <Text style={styles.helloText}>Driver Name</Text>
-          <Text style={styles.locationText}>Location</Text>
-          <Text style={styles.locationText}>Driver Rating</Text>
+          <Text style={styles.helloText}>Sallo Samuel</Text>
+          <Text style={styles.locationText}>Ghana</Text>
+          <Text style={styles.locationText}>4.0</Text>
         </View>
       </View>
       <View style={styles.statsContainer}>
         <View style={styles.statBox}>
-          <Text style={styles.statValue}>Ghc 320</Text>
+          <Text style={styles.statValue}>Ghc 30.00</Text>
           <Text style={styles.statLabel}>Overall earning</Text>
         </View>
         <View style={styles.statBox}>
@@ -61,7 +61,7 @@ const MainScreen = ({}) => {
           <View style={styles.requestHeader}>
             <Image source={require('../../assets/Placeholder.png')} style={styles.requesterImage} />
             <View style={styles.headerInfo}>
-              <Text style={styles.requesterName}>Customer Name</Text>
+              <Text style={styles.requesterName}>Michael Anang</Text>
               <View style={styles.requesterInfo}>
                 <Icon name="clock" size={14} color="#555" />
                 <Text style={styles.requestTime}>15 Min</Text>
@@ -105,15 +105,15 @@ const MainScreen = ({}) => {
           <View style={styles.requestHeader}>
             <Image source={require('../../assets/Placeholder.png')} style={styles.requesterImage} />
             <View style={styles.headerInfo}>
-              <Text style={styles.requesterName}>Customer Name</Text>
+              <Text style={styles.requesterName}>Gifty Appiah</Text>
               <View style={styles.requesterInfo}>
                 <Icon name="clock" size={14} color="#555" />
-                <Text style={styles.requestTime}>15 Min</Text>
+                <Text style={styles.requestTime}>5 Min</Text>
               </View>
             </View>
             <View>
-              <Text style={styles.requestPrice}>Ghc 20</Text>
-              <Text style={styles.requestDistance}>2.4km</Text>
+              <Text style={styles.requestPrice}>Ghc 10</Text>
+              <Text style={styles.requestDistance}>1km</Text>
             </View>
           </View>
           <View style={styles.requestDetails}>
@@ -131,7 +131,7 @@ const MainScreen = ({}) => {
                 <View style={[styles.locationDot, { backgroundColor: 'green' }]} />
                 <Text style={styles.tripTime}>02:30 PM</Text>
                 <View style={styles.locationTextContainer}>
-                  <Text style={styles.tripLocation}>Kumasi City Mall</Text>
+                  <Text style={styles.tripLocation}>Ejisu, Kumasi</Text>
                 </View>
               </View>
             </View>
