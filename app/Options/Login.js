@@ -36,7 +36,7 @@ const Login = () => {
           <Text style={styles.buttonText}>Login</Text>
         </TouchableOpacity>
         <Text style={styles.alt}>
-          Don't have an account? <TouchableOpacity style={styles.alttext} onPress={handleSignUpPress}><Text style={styles.alttext}>Sign Up</Text></TouchableOpacity>
+          Dont have an account? <TouchableOpacity style={styles.alttext} onPress={handleSignUpPress}><Text style={styles.alttext}>Sign Up</Text></TouchableOpacity>
         </Text>
       </SafeAreaView>
     </View>
