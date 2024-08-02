@@ -14,7 +14,7 @@ const languages = [
   { name: 'Dutch', code: 'nl', flag: 'https://flagcdn.com/w320/nl.png' },
 ];
 
-const LanguageSelectionScreen = ({ }) => {
+const LanguageSelectionScreen = () => {
   const [selectedLanguage, setSelectedLanguage] = useState('en');
   const navigation = useNavigation();
 

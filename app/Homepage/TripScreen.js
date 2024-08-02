@@ -6,7 +6,7 @@ import { useNavigation } from '@react-navigation/native';
 import Icon from 'react-native-vector-icons/FontAwesome';
 
 
-const Trip = ({ }) => {
+const Trip = () => {
 
   const [buttonText, setButtonText] = useState('Start Pickup');
   const slideAnim = useRef(new Animated.Value(Dimensions.get('window').height)).current; // Start off-screen
