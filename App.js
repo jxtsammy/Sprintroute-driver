@@ -57,9 +57,9 @@ const DrawerContent = (props) => {
 const StackNavigator = () => {
   return (
     <Stack.Navigator initialRouteName="RegScreen">
-      <Stack.Screen name="Login" component={RegScreen} options={{ headerShown: false }} />
+      {/* <Stack.Screen name="Login" component={RegScreen} options={{ headerShown: false }} />
       <Stack.Screen name="Login" component={UploadDocs} options={{ headerShown: false }} />
-      <Stack.Screen name="Login" component={EarnMoney} options={{ headerShown: false }} />
+      <Stack.Screen name="Login" component={EarnMoney} options={{ headerShown: false }} /> */}
       <Stack.Screen name="Login" component={Login} options={{ headerShown: false }} />
       <Stack.Screen name="SignUp" component={SignUp} options={{ headerShown: false }} />
       <Stack.Screen name="VerificationPrompt" component={Verification_Prompt} options={{ headerShown: false }} />
