@@ -6,7 +6,7 @@ import { useNavigation } from '@react-navigation/native';
 import Icon from 'react-native-vector-icons/Feather';
 
 
-const MainScreen = ({}) => {
+const MainScreen = () => {
   const [isOnline, setIsOnline] = useState(false);
 
   const toggleSwitch = () => setIsOnline(previousState => !previousState);
@@ -150,7 +150,7 @@ const MainScreen = ({}) => {
   );
 };
 
-const DrawerContent = ({}) => {
+const DrawerContent = () => {
   const navigation = useNavigation();
   return (
   <DrawerContentScrollView>
@@ -184,7 +184,7 @@ const App = () => {
   return (
     <NavigationContainer>
       <Drawer.Navigator drawerContent={props => <DrawerContent {...props} />}>
-        <Drawer.Screen name="Home" component={'Home'} />
+        <Drawer.Screen name="Home" component={MainScreen} />
         <Drawer.Screen name="MyAccount" component={'MyAccount'} />
         <Drawer.Screen name="History" component={'History'} />
         <Drawer.Screen name="Notifications" component={'Notifications'} />
@@ -201,7 +201,7 @@ const App = () => {
   );
 };
 
-export default MainScreen;
+export default App;
 
 // Styles
 const styles = StyleSheet.create({

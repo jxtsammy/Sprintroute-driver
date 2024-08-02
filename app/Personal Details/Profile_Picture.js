@@ -4,7 +4,7 @@ import { View, Image, StyleSheet, SafeAreaView, TouchableOpacity, Text } from 'r
 import { launchCamera } from 'react-native-image-picker';
 import { useNavigation } from '@react-navigation/native'
 
-const ImageUpload = ({ }) => {
+const ImageUpload = () => {
   const navigation = useNavigation();
   const handleNextScreen = () => {
     navigation.navigate('Vehicle_Info');

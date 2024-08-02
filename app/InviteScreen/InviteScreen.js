@@ -2,7 +2,7 @@ import React from 'react';
 import { View, Text, TouchableOpacity, Image, StyleSheet, TextInput, SafeAreaView } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 
-const InviteFriendScreen = ({ }) => {
+const InviteFriendScreen = () => {
   const inviteCode = 'Invite COde';
   const navigation = useNavigation();
 
