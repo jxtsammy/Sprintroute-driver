@@ -184,7 +184,7 @@ const App = () => {
   return (
     <NavigationContainer>
       <Drawer.Navigator drawerContent={props => <DrawerContent {...props} />}>
-        <Drawer.Screen name="Home" component={'Home'} />
+        <Drawer.Screen name="Home" component={MainScreen} />
         <Drawer.Screen name="MyAccount" component={'MyAccount'} />
         <Drawer.Screen name="History" component={'History'} />
         <Drawer.Screen name="Notifications" component={'Notifications'} />
@@ -200,9 +200,8 @@ const App = () => {
     </NavigationContainer>
   );
 };
-export default App;
 
-export default MainScreen;
+export default App;
 
 // Styles
 const styles = StyleSheet.create({
